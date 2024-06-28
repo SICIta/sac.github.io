@@ -1,5 +1,5 @@
 <welcome>
-<html lang="fr">
+    <html lang="fr">
 <head>
     <!-- Meta Pixel Code -->
     <script>
@@ -24,32 +24,59 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 20px;
+            background-color: #f7f7f7;
         }
-        form {
-            display: inline-block;
-            text-align: left;
-            margin-top: 20px;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        label, input, select, button {
-            display: block;
-            margin: 10px 0;
-            width: 100%;
+        .container > div {
+            flex: 1;
+            padding: 20px;
         }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        img {
+        .container img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
+        }
+        .container form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            width: calc(100% - 22px);
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
         }
     </style>
 </head>
@@ -57,87 +84,91 @@
     <h1>Achetez notre sac et pochette élégants!</h1>
     <p>Commandez dès maintenant notre sac et sa pochette assortie pour seulement 2700 DA!</p>
     
-    <img src="Sac.jpg" alt="Sac et pochette">
-    
-    <form action="https://formspree.io/f/xkndleyn" method="POST">
-        <label for="nom">Nom (الاسم):</label>
-        <input type="text" id="nom" name="nom" required>
-        
-        <label for="prenom">Prénom (اللقب):</label>
-        <input type="text" id="prenom" name="prenom" required>
-        
-        <label for="telephone">Téléphone (رقم الهاتف):</label>
-        <input type="tel" id="telephone" name="telephone" required>
-        
-        <label for="adresse">Adresse (العنوان):</label>
-        <input type="text" id="adresse" name="adresse" required>
-        
-        <label for="wilaya">Wilaya (الولاية):</label>
-        <select id="wilaya" name="wilaya" required>
-            <option value="" disabled selected>Choisir une wilaya</option>
-            <option value="Adrar">Adrar (أدرار)</option>
-            <option value="Chlef">Chlef (الشلف)</option>
-            <!-- Ajoutez les autres wilayas ici -->
-            <option value="Laghouat">Laghouat (الأغواط)</option>
-            <option value="Oum El Bouaghi">Oum El Bouaghi (أم البواقي)</option>
-            <option value="Batna">Batna (باتنة)</option>
-            <option value="Béjaïa">Béjaïa (بجاية)</option>
-            <option value="Biskra">Biskra (بسكرة)</option>
-            <option value="Béchar">Béchar (بشار)</option>
-            <option value="Blida">Blida (البليدة)</option>
-            <option value="Bouira">Bouira (البويرة)</option>
-            <option value="Tamanrasset">Tamanrasset (تمنراست)</option>
-            <option value="Tébessa">Tébessa (تبسة)</option>
-            <option value="Tlemcen">Tlemcen (تلمسان)</option>
-            <option value="Tiaret">Tiaret (تيارت)</option>
-            <option value="Tizi Ouzou">Tizi Ouzou (تيزي وزو)</option>
-            <option value="Alger">Alger (الجزائر)</option>
-            <option value="Djelfa">Djelfa (الجلفة)</option>
-            <option value="Jijel">Jijel (جيجل)</option>
-            <option value="Sétif">Sétif (سطيف)</option>
-            <option value="Saïda">Saïda (سعيدة)</option>
-            <option value="Skikda">Skikda (سكيكدة)</option>
-            <option value="Sidi Bel Abbès">Sidi Bel Abbès (سيدي بلعباس)</option>
-            <option value="Annaba">Annaba (عنابة)</option>
-            <option value="Guelma">Guelma (قالمة)</option>
-            <option value="Constantine">Constantine (قسنطينة)</option>
-            <option value="Médéa">Médéa (المدية)</option>
-            <option value="Mostaganem">Mostaganem (مستغانم)</option>
-            <option value="MSila">MSila (المسيلة)</option>
-            <option value="Mascara">Mascara (معسكر)</option>
-            <option value="Ouargla">Ouargla (ورقلة)</option>
-            <option value="Oran">Oran (وهران)</option>
-            <option value="El Bayadh">El Bayadh (البيض)</option>
-            <option value="Illizi">Illizi (إليزي)</option>
-            <option value="Bordj Bou Arreridj">Bordj Bou Arreridj (برج بوعريريج)</option>
-            <option value="Boumerdès">Boumerdès (بومرداس)</option>
-            <option value="El Tarf">El Tarf (الطارف)</option>
-            <option value="Tindouf">Tindouf (تندوف)</option>
-            <option value="Tissemsilt">Tissemsilt (تيسمسيلت)</option>
-            <option value="El Oued">El Oued (الوادي)</option>
-            <option value="Khenchela">Khenchela (خنشلة)</option>
-            <option value="Souk Ahras">Souk Ahras (سوق أهراس)</option>
-            <option value="Tipaza">Tipaza (تيبازة)</option>
-            <option value="Mila">Mila (ميلة)</option>
-            <option value="Aïn Defla">Aïn Defla (عين الدفلى)</option>
-            <option value="Naâma">Naâma (النعامة)</option>
-            <option value="Aïn Témouchent">Aïn Témouchent (عين تموشنت)</option>
-            <option value="Ghardaïa">Ghardaïa (غرداية)</option>
-            <option value="Relizane">Relizane (غليزان)</option>
-            <option value="Timimoun">Timimoun (تيميمون)</option>
-            <option value="Bordj Badji Mokhtar">Bordj Badji Mokhtar (برج باجي مختار)</option>
-            <option value="Ouled Djellal">Ouled Djellal (أولاد جلال)</option>
-            <option value="Béni Abbès">Béni Abbès (بني عباس)</option>
-            <option value="In Salah">In Salah (عين صالح)</option>
-            <option value="In Guezzam">In Guezzam (عين قزام)</option>
-            <option value="Touggourt">Touggourt (تقرت)</option>
-            <option value="Djanet">Djanet (جانت)</option>
-            <option value="El M'Ghair">El M'Ghair (المغير)</option>
-            <option value="El Meniaa">El Meniaa (المنيعة)</option>
-        </select>
-        
-        <button type="submit">Commander maintenant (أطلب الآن)</button>
-    </form>
+    <div class="container">
+        <div>
+            <img src="Sac.jpg" alt="Sac et pochette">
+        </div>
+        <div>
+            <form action="https://formspree.io/f/xkndleyn" method="POST">
+                <label for="nom">Nom (الاسم):</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="prenom">Prénom (اللقب):</label>
+                <input type="text" id="prenom" name="prenom" required>
+                
+                <label for="telephone">Téléphone (رقم الهاتف):</label>
+                <input type="tel" id="telephone" name="telephone" required>
+                
+                <label for="adresse">Adresse (العنوان):</label>
+                <input type="text" id="adresse" name="adresse" required>
+                
+                <label for="wilaya">Wilaya (الولاية):</label>
+                <select id="wilaya" name="wilaya" required>
+                    <option value="" disabled selected>Choisir une wilaya</option>
+                    <option value="Adrar">Adrar (أدرار)</option>
+                    <option value="Chlef">Chlef (الشلف)</option>
+                    <!-- Ajoutez les autres wilayas ici -->
+                    <option value="Laghouat">Laghouat (الأغواط)</option>
+                    <option value="Oum El Bouaghi">Oum El Bouaghi (أم البواقي)</option>
+                    <option value="Batna">Batna (باتنة)</option>
+                    <option value="Béjaïa">Béjaïa (بجاية)</option>
+                    <option value="Biskra">Biskra (بسكرة)</option>
+                    <option value="Béchar">Béchar (بشار)</option>
+                    <option value="Blida">Blida (البليدة)</option>
+                    <option value="Bouira">Bouira (البويرة)</option>
+                    <option value="Tamanrasset">Tamanrasset (تمنراست)</option>
+                    <option value="Tébessa">Tébessa (تبسة)</option>
+                    <option value="Tlemcen">Tlemcen (تلمسان)</option>
+                    <option value="Tiaret">Tiaret (تيارت)</option>
+                    <option value="Tizi Ouzou">Tizi Ouzou (تيزي وزو)</option>
+                    <option value="Alger">Alger (الجزائر)</option>
+                    <option value="Djelfa">Djelfa (الجلفة)</option>
+                    <option value="Jijel">Jijel (جيجل)</option>
+                    <option value="Sétif">Sétif (سطيف)</option>
+                    <option value="Saïda">Saïda (سعيدة)</option>
+                    <option value="Skikda">Skikda (سكيكدة)</option>
+                    <option value="Sidi Bel Abbès">Sidi Bel Abbès (سيدي بلعباس)</option>
+                    <option value="Annaba">Annaba (عنابة)</option>
+                    <option value="Guelma">Guelma (قالمة)</option>
+                    <option value="Constantine">Constantine (قسنطينة)</option>
+                    <option value="Médéa">Médéa (المدية)</option>
+                    <option value="Mostaganem">Mostaganem (مستغانم)</option>
+                    <option value="MSila">MSila (المسيلة)</option>
+                    <option value="Mascara">Mascara (معسكر)</option>
+                    <option value="Ouargla">Ouargla (ورقلة)</option>
+                    <option value="Oran">Oran (وهران)</option>
+                    <option value="El Bayadh">El Bayadh (البيض)</option>
+                    <option value="Illizi">Illizi (إليزي)</option>
+                    <option value="Bordj Bou Arreridj">Bordj Bou Arreridj (برج بوعريريج)</option>
+                    <option value="Boumerdès">Boumerdès (بومرداس)</option>
+                    <option value="El Tarf">El Tarf (الطارف)</option>
+                    <option value="Tindouf">Tindouf (تندوف)</option>
+                    <option value="Tissemsilt">Tissemsilt (تيسمسيلت)</option>
+                    <option value="El Oued">El Oued (الوادي)</option>
+                    <option value="Khenchela">Khenchela (خنشلة)</option>
+                    <option value="Souk Ahras">Souk Ahras (سوق أهراس)</option>
+                    <option value="Tipaza">Tipaza (تيبازة)</option>
+                    <option value="Mila">Mila (ميلة)</option>
+                    <option value="Aïn Defla">Aïn Defla (عين الدفلى)</option>
+                    <option value="Naâma">Naâma (النعامة)</option>
+                    <option value="Aïn Témouchent">Aïn Témouchent (عين تموشنت)</option>
+                    <option value="Ghardaïa">Ghardaïa (غرداية)</option>
+                    <option value="Relizane">Relizane (غليزان)</option>
+                    <option value="Timimoun">Timimoun (تيميمون)</option>
+                    <option value="Bordj Badji Mokhtar">Bordj Badji Mokhtar (برج باجي مختار)</option>
+                    <option value="Ouled Djellal">Ouled Djellal (أولاد جلال)</option>
+                    <option value="Béni Abbès">Béni Abbès (بني عباس)</option>
+                    <option value="In Salah">In Salah (عين صالح)</option>
+                    <option value="In Guezzam">In Guezzam (عين قزام)</option>
+                    <option value="Touggourt">Touggourt (تقرت)</option>
+                    <option value="Djanet">Djanet (جانت)</option>
+                    <option value="El M'Ghair">El M'Ghair (المغير)</option>
+                    <option value="El Meniaa">El Meniaa (المنيعة)</option>
+                </select>
+                
+                <button type="submit">Commander maintenant (أطلب الآن)</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
-
